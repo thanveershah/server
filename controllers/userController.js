@@ -35,6 +35,7 @@ const login = async (req, res) => {
    res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: true,
+      sameSite: "none",
    });
 
    res.json({ _id: username, username: username, accessToken });
