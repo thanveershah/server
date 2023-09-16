@@ -11,7 +11,8 @@ require("dotenv").config();
 
 app.use(
    cors({
-      origin: "https://client-five-teal.vercel.app",
+      methods: "GET, POST, PUT",
+      origin: "https://6505d9cddf5e4631989673ce--zingy-hamster-223bab.netlify.app",
       credentials: true,
    })
 );
