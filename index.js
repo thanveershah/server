@@ -11,7 +11,7 @@ require("dotenv").config();
 
 app.use(
    cors({
-      origin: "https://6505d9cddf5e4631989673ce--zingy-hamster-223bab.netlify.app/",
+      origin: "https://6505d9cddf5e4631989673ce--zingy-hamster-223bab.netlify.app",
       credentials: true,
    })
 );
