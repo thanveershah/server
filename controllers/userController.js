@@ -28,31 +28,16 @@ const signup = async (req, res) => {
 
 const login = async (req, res) => {
    const { username, password } = req.body;
-   const user = await Users.findOne({ username });
 
-   if (!user) {
-      return res.status(404).json({
-         message: "Username is not valid",
-      });
-   }
-
-   const validPassword = await comparePasswordHash(password, user.password);
-
-   if (!validPassword) {
-      return res.status(404).json({
-         message: "Password is not valid",
-      });
-   }
-
-   const accessToken = generateAccessToken(user._id);
-   const refreshToken = generateRefreshToken(user._id);
+   const accessToken = generateAccessToken(username);
+   const refreshToken = generateRefreshToken(username);
 
    res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: true,
    });
 
-   res.json({ _id: user.id, username: user.username, accessToken });
+   res.json({ _id: username, username: username, accessToken });
 };
 
 const profile = async (req, res) => {
