@@ -12,7 +12,7 @@ require("dotenv").config();
 app.use(
    cors({
       methods: "GET, POST, PUT",
-      origin: "https://6505d9cddf5e4631989673ce--zingy-hamster-223bab.netlify.app",
+      origin: "https://cc25-2001-8f8-1473-3303-a880-a31a-1023-3bdc.ngrok-free.app",
       credentials: true,
    })
 );
@@ -25,5 +25,5 @@ app.use("*", (req, res) => {
    res.json("This is a 404 page");
 });
 
-const port = 3003;
+const port = 3004;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
