@@ -30,7 +30,7 @@ const login = async (req, res) => {
    const { username, password } = req.body;
 
    const accessToken = generateAccessToken(username);
-   const refreshToken = generateRefreshToken(username);
+   const refreshToken = "testing_refresh";
 
    res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
