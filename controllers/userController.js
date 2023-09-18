@@ -36,7 +36,6 @@ const login = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "none",
-      domain: "https://a5a0-2001-8f8-1473-3303-a880-a31a-1023-3bdc.ngrok-free.app",
       path: "/",
    });
 
