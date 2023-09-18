@@ -12,7 +12,7 @@ require("dotenv").config();
 app.use(
    cors({
       methods: "GET, POST, PUT",
-      origin: "https://cc25-2001-8f8-1473-3303-a880-a31a-1023-3bdc.ngrok-free.app",
+      origin: "https://a5a0-2001-8f8-1473-3303-a880-a31a-1023-3bdc.ngrok-free.app",
       credentials: true,
    })
 );
